@@ -90,6 +90,7 @@ button:active {
 .invalid input {
   border: 1px solid #b40e0e;
   background-color: #fddddd;
+  animation: wiggle .4s 1 ease-in-out;
 }
 
 .invalid input:focus {
@@ -99,4 +100,21 @@ button:active {
 
 .error-text {
   color: #b40e0e;
+  transform: translateY(-.75rem);
+  margin-bottom: -2.5rem;
+}
+
+@keyframes wiggle {
+      25%{
+         transform: translateX(.35rem); 
+      }
+      50% {
+        transform: translateX(-.35rem);
+      }
+      75%{
+        transform: translateX(.15rem);
+      }
+      100%{
+        transform: translateX(-.15rem);
+      }
 }
