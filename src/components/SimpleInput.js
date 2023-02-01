@@ -32,9 +32,13 @@ const SimpleInput = (props) => {
     setEnteredName(' '); // ==> PREFERED METHOD FOR RESETING THE ENTERED VALUE
   };
 
+  const nameInputClasses = enteredNameIsValid 
+  ? 'form-control' 
+  : 'form-control invalid';
+
   return (
     <form onSubmit={formSubmitionHandler}>
-      <div className="form-control">
+      <div className={nameInputClasses}>
         <label htmlFor="name">Your Name</label>
         <input
           ref={nameInputRef}
