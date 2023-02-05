@@ -26,6 +26,10 @@ body {
   margin-bottom: 1rem;
 }
 
+.form-control:nth-child(2){
+  margin-top: 2rem;
+}
+
 .form-control input,
 .form-control label {
   display: block;
@@ -73,6 +77,15 @@ button {
   cursor: pointer;
 }
 
+button:disabled,
+button:disabled:hover,
+button:disabled:active {
+	background-color:#ccc;
+	color:#292929;
+	border-color:#ccc;
+	cursor: not-allowed;
+}
+
 button:hover,
 button:active {
   background-color: #33059e;
@@ -106,10 +119,10 @@ button:active {
 
 @keyframes wiggle {
       25%{
-         transform: translateX(.35rem); 
+         transform: translateX(.37rem); 
       }
       50% {
-        transform: translateX(-.35rem);
+        transform: translateX(-.37rem);
       }
       75%{
         transform: translateX(.15rem);
