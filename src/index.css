@@ -26,10 +26,6 @@ body {
   margin-bottom: 1rem;
 }
 
-.form-control:nth-child(2){
-  margin-top: 2rem;
-}
-
 .form-control input,
 .form-control label {
   display: block;
@@ -37,7 +33,9 @@ body {
 
 .form-control label {
   font-weight: bold;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.2rem;
+  margin-top:0.5rem
+
 }
 
 .form-control input,
@@ -77,19 +75,19 @@ button {
   cursor: pointer;
 }
 
-button:disabled,
-button:disabled:hover,
-button:disabled:active {
-	background-color:#ccc;
-	color:#292929;
-	border-color:#ccc;
-	cursor: not-allowed;
-}
-
 button:hover,
 button:active {
   background-color: #33059e;
   border-color: #33059e;
+}
+
+button:disabled,
+button:disabled:hover,
+button:disabled:active {
+  background-color: #ccc;
+  color: #292929;
+  border-color: #ccc;
+  cursor: not-allowed;
 }
 
 .form-actions {
@@ -111,23 +109,24 @@ button:active {
   background-color: #fbe8d2;
 }
 
+
 .error-text {
+  position: absolute;
+  transform: translateY(-1rem);
   color: #b40e0e;
-  transform: translateY(-.75rem);
-  margin-bottom: -2.5rem;
 }
 
 @keyframes wiggle {
-      25%{
-         transform: translateX(.37rem); 
-      }
-      50% {
-        transform: translateX(-.37rem);
-      }
-      75%{
-        transform: translateX(.15rem);
-      }
-      100%{
-        transform: translateX(-.15rem);
-      }
+  25%{
+     transform: translateX(.37rem); 
+  }
+  50% {
+    transform: translateX(-.37rem);
+  }
+  75%{
+    transform: translateX(.15rem);
+  }
+  100%{
+    transform: translateX(-.15rem);
+  }
 }
